@@ -105,7 +105,7 @@ export default class Calculator extends Component {
     let formula = this.state.formula;
     let lastInput = formula.charAt(formula.length - 1);;
     if(this.isOperator(lastInput) || lastInput === "."){
-        formula.slice(0, -1);
+        formula = formula.slice(0, -1);
     }
     let result = eval(formula);
     formula = formula + " = " + result;
